@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container my-4">
     <div class="row">
         <div class="col-lg-6">
             <?php Flasher::flash() ?>
@@ -12,16 +12,6 @@
             </button>
         </div>
         <div class="col-lg-6">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown button
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
             <!-- search -->
             <form action="<?= BASURL ?>/task/search" method="post">
                 <div class="input-group mb-3">
