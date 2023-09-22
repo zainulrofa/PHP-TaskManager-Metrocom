@@ -12,7 +12,7 @@ class Task_model
 
     public function getAllTask()
     {
-        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC');
+        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY update_at DESC');
         return $this->db->resultSet();
     }
 
@@ -72,7 +72,7 @@ class Task_model
     public function searchDataTask()
     {
         $keyword = $_POST['keyword'];
-        $query = "SELECT * FROM tasks WHERE title LIKE :keyword";
+        $query = "SELECT * FROM tasks WHERE CONCAT(title, status) LIKE :keyword";
         $this->db->query($query);
         $this->db->bind('keyword', "%$keyword%");
         return $this->db->resultSet();
