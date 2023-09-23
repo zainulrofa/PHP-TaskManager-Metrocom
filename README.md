@@ -45,11 +45,22 @@ Open the control panel and start the apache and MySQL module.
 
 ### 4. Open the App
 
-Create folder metrocom/taskmanager in folder htdocs:
+Create folder metrocom\taskmanager in folder htdocs:
 ```
 D:\xampp\htdocs\
 ```
+Create a config folder inside the app folder to store the config file.php:
+```
+<?php
+// ROUTING
+define('BASURL', 'http://localhost/metrocom/taskmanager/public');
 
+// DB
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'task_manager');
+```
 You can access the app on web browser by url:
 ```
 http://localhost/metrocom/taskmanager/public
